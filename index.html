@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовое задание</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <p class="title">
+            <span class="slim">Моя</span><span class="bold"> супер команда</span>
+        </p>
+        <div class="delimiter_block">
+            <div class="delimiter"></div>
+            <div class="delimiter short"></div>
+        </div>
+        <div class="header_slider">
+            <div class="slider_heroes">
+            <div class="hero_profile">
+                <div class="hero_photo">
+                    <img src="images/statham.png" alt="Джейсон Стейтем">
+                </div>
+                <div class="hero_info">
+                    <div class="hero_name">Джейсон Стейтем</div>
+                    <div class="hero_prof">Мастер ножей</div>
+                </div>
+                <div class="hero_date_in">
+                    <p>Дата вступления в команду:</p>
+                    <p>26.08.1967</p>
+                </div>
+            </div>
+            <div class="hero_profile">
+                <div class="hero_photo">
+                    <img src="images/vandamm.png" alt="Ван Дамм">
+                </div>
+                <div class="hero_name">Ван Дамм</div>
+                <div class="hero_prof">Танцор</div>
+                <div class="hero_date_in">
+                    <p>Дата вступления в команду:</p>
+                    <p>18.10.1960</p>
+                </div>
+            </div>
+            <div class="hero_profile">
+                <div class="hero_photo">
+                    <img src="images/stallone.png" alt="Сильвестр Сталлоне">
+                </div>
+                <div class="hero_name">Сильвестр Сталлоне</div>
+                <div class="hero_prof">Полуликий</div>
+                <div class="hero_date_in">
+                    <p>Дата вступления в команду:</p>
+                    <p>06.08.1946</p>
+                </div>
+            </div>
+            <div class="hero_profile">
+                <div class="hero_photo">
+                    <img src="images/jet.png" alt="Джет Ли">
+                </div>
+                <div class="hero_name">Джет Ли</div>
+                <div class="hero_prof">Фанат Брюса</div>
+                <div class="hero_date_in">
+                    <p>Дата вступления в команду:</p>
+                    <p>27.02.1973</p>
+                </div>
+            </div>
+            </div>
+            <div class="slider_nav">
+                <div class="slider_nav_dot active"></div>
+                <div class="slider_nav_dot"></div>
+                <div class="slider_nav_dot"></div>
+            </div>
+        </div>
+    </div>
+    <div class="middle dark_light">
+        <p class="title">
+            <span class="slim">Добавь своего</span><span> героя</span>
+        </p>
+        <div class="delimiter_block">
+            <div class="delimiter"></div>
+            <div class="delimiter short"></div>
+        </div>
+            <form class="hero_add_form"  name="add_hero" action="add_hero.php" method="post">
+                <div class="row">
+                    <div class="col">
+                    <label for="hero_name">Имя <abbr title="required">*</abbr><br></label>
+                        <input type="text" id="hero_name">
+                    </div>
+                    <div class="col">
+                    <label for="hero_title">Титул <abbr title="required">*</abbr><br></label>
+                        <input type="text" id="hero_title">
+                    </div>
+                </div>
+                <p>
+                    <label for="hero_file">Фото <abbr title="required">*</abbr></label>
+                    <input type="file" id="hero_file">
+                </p>
+                <p><button class="btn_accept" type="submit">Принять</button></p>
+            </form>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <span>ALL RIGHTS RESERVED. COPYRIGHT © CKDIGITAL</span>
+        </div>
+        <div class="links">
+            <img src="images/links/facebook.png" alt="facebook">
+            <img src="images/links/twitter.png" alt="twitter">
+            <img src="images/links/google.png" alt="google">
+            <img src="images/links/linkedin.png" alt="linkedin">
+        </div>
+    </div>
+</div>
+</body>
+</html>
