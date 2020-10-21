@@ -9,7 +9,7 @@ Dropzone.options.myDropzone = {
 
     init: function () {
 
-        var submitButton = document.querySelector("#submit-all");
+        var submitButton = document.querySelector("#submit_btn");
         var wrapperThis = this;
 
         submitButton.addEventListener("click", function () {

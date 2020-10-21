@@ -33,7 +33,7 @@
             <div class="slider_heroes">
             <div class="hero_profile">
                 <div class="hero_photo">
-                    <img src="images/statham.png" alt="Джейсон Стейтем">
+                    <img src="images/heroes/statham.png" alt="Джейсон Стейтем">
                 </div>
                 <div class="hero_info">
                     <div class="hero_name">Джейсон Стейтем</div>
@@ -46,7 +46,7 @@
             </div>
             <div class="hero_profile">
                 <div class="hero_photo">
-                    <img src="images/vandamm.png" alt="Ван Дамм">
+                    <img src="images/heroes/vandamm.png" alt="Ван Дамм">
                 </div>
                 <div class="hero_name">Ван Дамм</div>
                 <div class="hero_prof">Танцор</div>
@@ -57,7 +57,7 @@
             </div>
             <div class="hero_profile">
                 <div class="hero_photo">
-                    <img src="images/stallone.png" alt="Сильвестр Сталлоне">
+                    <img src="images/heroes/stallone.png" alt="Сильвестр Сталлоне">
                 </div>
                 <div class="hero_name">Сильвестр Сталлоне</div>
                 <div class="hero_prof">Полуликий</div>
@@ -68,7 +68,7 @@
             </div>
             <div class="hero_profile">
                 <div class="hero_photo">
-                    <img src="images/jet.png" alt="Джет Ли">
+                    <img src="images/heroes/jet.png" alt="Джет Ли">
                 </div>
                 <div class="hero_name">Джет Ли</div>
                 <div class="hero_prof">Фанат Брюса</div>
@@ -89,25 +89,26 @@
 
     <div class="middle dark_light">
         <div class="container">
-        <p class="title">
-            <span class="slim">Добавь своего</span><span> героя</span>
-        </p>
-        <div class="delimiter_block">
-            <div class="delimiter"></div>
-            <div class="delimiter short"></div>
-        </div>
-            <form class="hero_add_form"  name="add_hero" action="add_hero.php" method="post" enctype="multipart/form-data">
+            <div class="container_slim">
+                <p class="title">
+                    <span class="slim">Добавь своего</span><span> героя</span>
+                </p>
+                <div class="delimiter_block">
+                    <div class="delimiter"></div>
+                    <div class="delimiter short"></div>
+                </div>
+            <form class="hero_add_form"  name="add_hero" action="" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col">
                         <div class="input1">
                             <label for="hero_name">Имя <abbr title="required">*</abbr></label><br>
-                            <input type="text" id="hero_name">
+                            <input type="text" id="hero_name" name="hero_name">
                         </div>
                     </div>
                     <div class="col">
                         <div class="input2">
                             <label for="hero_title">Титул <abbr title="required">*</abbr></label><br>
-                            <input type="text" id="hero_title">
+                            <input type="text" id="hero_title" name="hero_title">
                         </div>
                     </div>
                 </div>
@@ -123,18 +124,27 @@
                 <button id="submit-all" class="btn_accept" type="submit">Принять</button>
             </form>
         </div>
+        </div>
     </div>
     <div class="footer">
         <div class="container">
             <div class="footer_block">
             <div class="copyright">
-                <span>ALL RIGHTS RESERVED. COPYRIGHT © CKDIGITAL</span>
+                <span>ALL RIGHTS RESERVED. COPYRIGHT &copy CKDIGITAL</span>
             </div>
             <div class="links">
-                <img src="images/links/facebook.png" alt="facebook">
-                <img src="images/links/twitter.png" alt="twitter">
-                <img src="images/links/google.png" alt="google">
-                <img src="images/links/linkedin.png" alt="linkedin">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/links/facebook.png" alt="facebook">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/links/twitter.png" alt="twitter">
+                </a>
+                <a href="https://google.com" target="_blank">
+                    <img src="images/links/google.png" alt="google">
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="images/links/linkedin.png" alt="linkedin">
+                </a>
             </div>
             </div>
         </div>

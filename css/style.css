@@ -13,17 +13,19 @@ p {
     min-height: 100%;
 }
 
-.header{
+.header {
     background: url(../images/header.png);
     width: 100%;
     float: left;
 }
-.container{
+.container {
     max-width: 1170px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
 }
+
+
 .title {
     font-size: 44px;
     font-weight: 400;
@@ -114,6 +116,7 @@ p {
     background-color: #fff;
     margin: 0 9px;
     display: inline-block;
+    cursor: pointer;
 }
 .active {
     background-color: #e8aa4e;
@@ -127,7 +130,10 @@ p {
 .middle .title {
     padding-top: 109px;
 }
-
+.container_slim {
+    margin: 0 auto;
+    padding: 0 210px;
+}
 .hero_add_form {
     width: 100%;
     text-align: center;
@@ -178,12 +184,12 @@ abbr {
 .input1 {
     position: relative;
     margin-right: 15px;
-    margin-left: 195px;
+
 }
 .input2 {
     position: relative;
     margin-left: 15px;
-    margin-right: 195px;
+
 }
 
 .hero_file {
@@ -191,7 +197,7 @@ abbr {
     margin: 0 auto;
 }
 .dropzone_block {
-    max-width: 780px;
+    max-width: 750px;
     margin: 0 auto;
 }
 
@@ -213,10 +219,17 @@ abbr {
     color: #fff;
     float:right;
     margin-top: 87px;
+    border: none;
 }
 
 .btn_accept:hover{
     cursor: pointer;
+    border: 2px solid #b0b0b0;
+}
+
+#result {
+    color: green;
+    padding-top: 15px;
 }
 
 .footer {
@@ -227,6 +240,7 @@ abbr {
 }
 .footer_block{
     line-height: 92px;
+    padding: 0 40px;
 }
 .copyright {
     font-size: 12px;
@@ -237,4 +251,8 @@ abbr {
 }
 .links img {
     vertical-align: middle;
+    cursor: pointer;
+}
+.links img:hover {
+    filter: opacity(1) drop-shadow(0 0 0 white);
 }
