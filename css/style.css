@@ -158,8 +158,22 @@ p {
 .hero_add_form input{
     margin-top: 8px;
 }
+
+.hero_add_form input:focus {
+    border-color: #e8aa4e;
+}
+
 .hero_add_form p {
     text-align: left;
+}
+
+.form_error {
+    display: none;
+    color: #e8aa4e;
+}
+.show {
+    display: block;
+    position: absolute;
 }
 
 abbr {

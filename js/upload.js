@@ -16,6 +16,22 @@ Dropzone.options.myDropzone = {
 
         submitButton.addEventListener("click", function (e) {
             e.preventDefault();
+            $('#error_name').removeClass('show');
+            $('#error_title').removeClass('show');
+
+            if ($('#hero_name').val() == '') {
+                $('#hero_name').focus();
+                $('#error_name').addClass('show');
+                return false;
+            }else{
+                if($('#hero_title').val() == '')
+                {
+                    $('#hero_title').focus();
+                    $('#error_title').addClass('show');
+                    return false;
+                }
+            }
+
             if (wrapperThis.getQueuedFiles().length === 0) {
                 var blob = new Blob();
                 blob.upload = { 'chunked': wrapperThis.defaultOptions.chunking };

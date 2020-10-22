@@ -5,6 +5,15 @@ $(document).ready(function() {
             getHeroes('.header_slider', page, 'get_heroes.php');
         }
     );
+    $('#hero_name').on('blur', function(){
+        if ($('#hero_name').val())
+            $('#error_name').removeClass('show');
+    });
+
+    $('#hero_title').on('blur', function(){
+        if ($('#hero_title').val())
+            $('#error_title').removeClass('show');
+    });
 });
 
 function getHeroes(res, page, url){

@@ -52,12 +52,14 @@
                             <div class="input1">
                                 <label for="hero_name">Имя <abbr title="required">*</abbr></label><br>
                                 <input type="text" id="hero_name" name="hero_name">
+                                <p id="error_name" class = "form_error">Задайте имя героя</p>
                             </div>
                         </div>
                         <div class="col">
                             <div class="input2">
                                 <label for="hero_title">Титул <abbr title="required">*</abbr></label><br>
                                 <input type="text" id="hero_title" name="hero_title">
+                                <p id="error_title" class = "form_error">Задайте титул героя</p>
                             </div>
                         </div>
                     </div>
