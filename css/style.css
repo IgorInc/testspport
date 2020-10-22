@@ -77,12 +77,15 @@ p {
     width: 25%;
     display: inline-block;
     text-align: center;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 .hero_photo {
     margin-bottom: 23px;
 }
 .hero_photo img{
     border-radius: 50%;
+    max-width: 100%;
 }
 
 .hero_info {
@@ -207,7 +210,9 @@ abbr[title] {
     height: 108px;
     min-height: 108px;
     border: 1px solid rgba(0, 0, 0, 0.4);
-    padding: 0;
+    padding: 0 15px;
+    display: table;
+    width: 100%;
 }
 
 .dropzone .dz-preview {
@@ -225,8 +230,9 @@ abbr[title] {
 
 .dropzone .dz-message {
     font-size: 12px;
-    line-height: 108px;
     margin: 0;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .btn_del {
@@ -244,7 +250,10 @@ abbr[title] {
     color: red;
     border-color: red;
 }
-
+.btn_block {
+    width: 100%;
+    text-align: left;
+}
 .btn_accept {
     font-size: 16px;
     font-weight: 400;
@@ -292,4 +301,94 @@ abbr[title] {
 }
 .links img:hover {
     filter: opacity(1) drop-shadow(0 0 0 white);
+}
+
+/*media*/
+@media screen and (max-width: 980px){
+    .container_slim {
+        padding: 0 150px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container_slim {
+        padding: 0 15px;
+    }
+    .title {
+        padding-top: 50px;
+    }
+    .header_slider {
+        margin-top: 46px;
+    }
+    .hero_photo {
+        margin-bottom: 15px;
+    }
+    .hero_name {
+        font-size: 2.5vw;
+    }
+    .hero_prof {
+        font-size: 2vw;
+    }
+    .hero_date_in {
+        font-size: 2vw;
+        line-height: 2.5vw;
+        margin-top: 15px;
+    }
+
+    .middle .title {
+        padding-top: 50px;
+    }
+    .middle {
+        padding-bottom: 51px;
+    }
+
+    .slider_nav {
+        margin: 49px auto 42px;
+    }
+    .hero_add_form {
+        margin-top: 42px;
+    }
+    .btn_accept {
+        margin-top: 43px;
+    }
+    .footer_block {
+        padding: 0 15px;
+    }
+    .dropzone .dz-message .dz-button {
+        line-height: 12px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .title {
+        font-size: 22px;
+    }
+    .hero_profile {
+        padding: 0 5px;
+    }
+    .slider_nav_dot {
+        width: 11px;
+        height: 11px;
+    }
+    .col {
+        width: 100%;
+    }
+    .input1 {
+        margin: 0 0 15px;
+    }
+    .input2 {
+        margin: 0;
+    }
+    .footer_block {
+        text-align: center;
+        line-height: 31px;
+        font-size: 12px;
+        padding: 15px;
+    }
+    .copyright {
+        float: none;
+    }
+    .links {
+        float: none;
+    }
 }

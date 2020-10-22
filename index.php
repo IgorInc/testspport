@@ -71,7 +71,9 @@
                             </div>
                         </div>
                     </div>
-                    <button id="submit_btn" class="btn_accept" type="submit">Принять</button>
+                    <div class="btn_block">
+                        <button id="submit_btn" class="btn_accept" type="submit">Принять</button>
+                    </div>
                 </form>
                 <p id="result"></p>
             </div>
@@ -80,9 +82,6 @@
     <div class="footer">
         <div class="container">
             <div class="footer_block">
-                <div class="copyright">
-                    <span>ALL RIGHTS RESERVED. COPYRIGHT &copy CKDIGITAL</span>
-                </div>
                 <div class="links">
                     <a href="https://facebook.com" target="_blank">
                         <img src="images/links/facebook.png" alt="facebook">
@@ -96,6 +95,9 @@
                     <a href="https://linkedin.com" target="_blank">
                         <img src="images/links/linkedin.png" alt="linkedin">
                     </a>
+                </div>
+                <div class="copyright">
+                    <span>ALL RIGHTS RESERVED. COPYRIGHT &copy CKDIGITAL</span>
                 </div>
             </div>
         </div>
