@@ -9,13 +9,14 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/dropzone.min.css">
-    <link rel="stylesheet" href="css/style.css">
+
     <script
         src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous">
     </script>
     <script src="js/dropzone.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/upload.js"></script>
     <script src="js/ajax.js"></script>
 </head>
@@ -31,59 +32,7 @@
                 <div class="delimiter short"></div>
             </div>
             <div class="header_slider">
-                <div class="slider_heroes">
-                    <div class="hero_profile">
-                        <div class="hero_photo">
-                            <img src="images/heroes/statham.png" alt="Джейсон Стейтем">
-                        </div>
-                        <div class="hero_info">
-                            <div class="hero_name">Джейсон Стейтем</div>
-                            <div class="hero_prof">Мастер ножей</div>
-                        </div>
-                        <div class="hero_date_in">
-                            <p>Дата вступления в команду:</p>
-                            <p>26.08.1967</p>
-                        </div>
-                    </div>
-                    <div class="hero_profile">
-                        <div class="hero_photo">
-                            <img src="images/heroes/vandamm.png" alt="Ван Дамм">
-                        </div>
-                        <div class="hero_name">Ван Дамм</div>
-                        <div class="hero_prof">Танцор</div>
-                        <div class="hero_date_in">
-                            <p>Дата вступления в команду:</p>
-                            <p>18.10.1960</p>
-                        </div>
-                    </div>
-                    <div class="hero_profile">
-                        <div class="hero_photo">
-                            <img src="images/heroes/stallone.png" alt="Сильвестр Сталлоне">
-                        </div>
-                        <div class="hero_name">Сильвестр Сталлоне</div>
-                        <div class="hero_prof">Полуликий</div>
-                        <div class="hero_date_in">
-                            <p>Дата вступления в команду:</p>
-                            <p>06.08.1946</p>
-                        </div>
-                    </div>
-                    <div class="hero_profile">
-                        <div class="hero_photo">
-                            <img src="images/heroes/jet.png" alt="Джет Ли">
-                        </div>
-                        <div class="hero_name">Джет Ли</div>
-                        <div class="hero_prof">Фанат Брюса</div>
-                        <div class="hero_date_in">
-                            <p>Дата вступления в команду:</p>
-                            <p>27.02.1973</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider_nav">
-                    <div class="slider_nav_dot active"></div>
-                    <div class="slider_nav_dot"></div>
-                    <div class="slider_nav_dot"></div>
-                </div>
+                <?include_once 'get_heroes.php'; ?>
             </div>
         </div>
     </div>
@@ -98,7 +47,7 @@
                     <div class="delimiter"></div>
                     <div class="delimiter short"></div>
                 </div>
-                <form id="form_add_hero" class="hero_add_form"  name="add_hero" action="" method="post" enctype="multipart/form-data">
+                <form id="form_add_hero" class="hero_add_form"  name="add_hero" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col">
                             <div class="input1">
@@ -114,7 +63,7 @@
                         </div>
                     </div>
                     <div class="dropzone_block">
-                        <p>Фото <abbr title="required">*</abbr></p>
+                        <p>Фото</p>
                         <div id="myDropzone" class="dropzone" name="mainFileUploader">
                             <div class="fallback">
                                 <label for="hero_file">Фото <abbr title="required">*</abbr></label>
