@@ -1,8 +1,9 @@
+//Инициализация Dropzone - здесь отправляем ajax'ом данные формы
 Dropzone.options.myDropzone = {
     url: "add_new_hero.php",
     autoProcessQueue: false,
     uploadMultiple: false,
-    parallelUploads: 100,
+    parallelUploads: 1,
     maxFiles: 1,
     maxFileSize: 1,
     acceptedFiles: "image/*",
@@ -10,7 +11,6 @@ Dropzone.options.myDropzone = {
     dictInvalidFileType: 'Можно загрузить только картинки',
 
     init: function () {
-
         var submitButton = document.querySelector("#submit_btn");
         var wrapperThis = this;
 
@@ -20,10 +20,8 @@ Dropzone.options.myDropzone = {
                 var blob = new Blob();
                 blob.upload = { 'chunked': wrapperThis.defaultOptions.chunking };
                 wrapperThis.uploadFile(blob);
-
-                //this.dropzone.processQueue();
             }
-            console.log('Btn_click - отправляем данные.');
+
             wrapperThis.processQueue();
             return false;
         });
@@ -31,50 +29,43 @@ Dropzone.options.myDropzone = {
         this.on("success", function(file,response){
             $('#result').html(response);
             let page = {slider:1};
-            console.log('DZ ОК.');
+
+            //перевыводим слайдер с новым героем
             getHeroes('.header_slider', page, 'get_heroes.php');
+
             //очищаем форму после успешной отправки
             $('#form_add_hero')[0].reset();
             wrapperThis.removeAllFiles();
 
+            //очищаем поле с сообщением
             setTimeout(function(){
                 $('#result').html('');
             },2000);
         });
 
         this.on("addedfile", function (file) {
+            //Чтобы юзер не смог закинуть неск фоток - оставляем только одну
             if (this.files.length > 1) {
                 this.removeFile(this.files[0]);
             }
 
-            // Create the remove button
+            //Добавляем кнопку для удаления фото
             var removeButton = Dropzone.createElement("<button class='btn_del'>Удалить фото</button>");
 
-            // Listen to the click event
             removeButton.addEventListener("click", function (e) {
-                // Make sure the button click doesn't submit the form:
                 e.preventDefault();
                 e.stopPropagation();
-
-                // Remove the file preview.
                 wrapperThis.removeFile(file);
-                // If you want to the delete the file on the server as well,
-                // you can do the AJAX request here.
             });
 
-            // Add the button to the file preview element.
             file.previewElement.appendChild(removeButton);
         });
+
+        //добавляем данные формы, чтобы получить в $_POST
         this.on('sending', function (data, xhr, formData) {
             formData.append("hero_name", $("#hero_name").val());
             formData.append("hero_title", $("#hero_title").val());
         });
-/*
-        this.on('sendingmultiple', function (data, xhr, formData) {
-            formData.append("hero_name", $("#hero_name").val());
-            formData.append("hero_title", $("#hero_title").val());
-        });
 
- */
     }
 };
